@@ -1,8 +1,163 @@
 <!doctype html>
-<html>
-  <head><meta charset="utf-8" /><title>Assignment 1</title></head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 1 | Azure + GitHub CI/CD</title>
+
+    <!-- Link your CSS file -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
   <body>
-    <h1>Assignment 1 Deployed </h1>
-    <p>Name: Yogesh Kadam</p>
+    <!-- Top bar -->
+    <header class="topbar">
+      <div class="container topbar-inner">
+        <div class="brand">
+          <span class="logo">YK</span>
+          <div>
+            <div class="brand-title">Assignment 1</div>
+            <div class="brand-subtitle">GitHub + Azure Static Web Apps (CI/CD)</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#overview">Overview</a>
+          <a href="#steps">Steps</a>
+          <a href="#links">Links</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <main class="container">
+      <section class="hero" id="overview">
+        <div class="hero-left">
+          <span class="pill">Deployed ✅</span>
+          <h1>CI/CD working with GitHub → Azure</h1>
+          <p class="muted">
+            This page is deployed using Azure Static Web Apps and automatically updates when I push to GitHub.
+          </p>
+
+          <div class="hero-cards">
+            <div class="card">
+              <div class="card-title">Student</div>
+              <div class="card-value">Yogesh Kadam</div>
+              <div class="card-note">Illinois Institute of Technology</div>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Course Goal</div>
+              <div class="card-value">Source Control + Cloud</div>
+              <div class="card-note">GitHub repo + Azure URL</div>
+            </div>
+
+            <div class="card">
+              <div class="card-title">Status</div>
+              <div class="card-value success">Live & Updating</div>
+              <div class="card-note">Auto-deploy on push</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="panel">
+            <h2>Quick Proof</h2>
+            <ol class="list">
+              <li>Edit this file</li>
+              <li>Commit + push to GitHub</li>
+              <li>GitHub Actions runs</li>
+              <li>Azure site updates</li>
+            </ol>
+
+            <div class="divider"></div>
+
+            <div class="small">
+              <div><span class="label">Last updated:</span> <span id="lastUpdated">Loading…</span></div>
+              <div><span class="label">Build note:</span> Static HTML + CSS</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Steps section -->
+      <section class="section" id="steps">
+        <h2>What I Did</h2>
+        <p class="muted">
+          Built a basic application, committed it to GitHub, and deployed it to Azure with automatic CI/CD.
+        </p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>1) GitHub</h3>
+            <p class="muted">
+              Created a repository and pushed source code (index.html + styles.css).
+            </p>
+            <ul class="bullets">
+              <li>Initial commit</li>
+              <li>Push to main</li>
+              <li>Repo URL submitted</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>2) Azure Static Web App</h3>
+            <p class="muted">
+              Connected Azure to GitHub so deployments trigger automatically.
+            </p>
+            <ul class="bullets">
+              <li>Create Static Web App</li>
+              <li>Select repo + branch</li>
+              <li>Verify Azure URL works</li>
+            </ul>
+          </div>
+
+          <div class="card">
+            <h3>3) CI/CD</h3>
+            <p class="muted">
+              Verified GitHub Actions builds and deploys successfully after each push.
+            </p>
+            <ul class="bullets">
+              <li>Actions run is green</li>
+              <li>Live site updates</li>
+              <li>Cloud URL submitted</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Links section -->
+      <section class="section" id="links">
+        <h2>Submission Links</h2>
+        <p class="muted">Replace the placeholders below once you have both URLs.</p>
+
+        <div class="card">
+          <div class="links">
+            <div class="link-row">
+              <span class="label">GitHub Repo:</span>
+              <span class="mono">https://github.com/Ykadam006/assignment1_BackEnd</span>
+            </div>
+            <div class="link-row">
+              <span class="label">Azure URL:</span>
+              <span class="mono">https://&lt;your-app&gt;.azurestaticapps.net</span>
+            </div>
+          </div>
+
+          <div class="note">
+            Tip: After you paste your real Azure URL, commit + push again to show CI/CD proof.
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <div class="muted">© 2026 Yogesh Kadam • Assignment 1</div>
+      </footer>
+    </main>
+
+    <script>
+      // Simple proof element: show current date/time of page load
+      const el = document.getElementById("lastUpdated");
+      el.textContent = new Date().toLocaleString();
+    </script>
   </body>
 </html>
